@@ -65,6 +65,7 @@ public class PizzaGUIFrame extends JFrame {
         crustRadBtn1.setActionCommand("Thin");
         crustRadBtn2 = new JRadioButton("Regular");
         crustRadBtn2.setActionCommand("Regular");
+        crustRadBtn2.setSelected(true);
         crustRadBtn3 = new JRadioButton("Deep-dish");
         crustRadBtn3.setActionCommand("Deep-dish");
         crustBtnGrp = new ButtonGroup();
@@ -178,6 +179,16 @@ public class PizzaGUIFrame extends JFrame {
 
     private void clearOrder() {
         orderArea.setText("");
+        crustRadBtn1.setSelected(false);
+        crustRadBtn2.setSelected(true);
+        crustRadBtn3.setSelected(false);
+        sizeComboBox.setSelectedIndex(0);
+        toppingCheckBox1.setSelected(false);
+        toppingCheckBox2.setSelected(false);
+        toppingCheckBox3.setSelected(false);
+        toppingCheckBox4.setSelected(false);
+        toppingCheckBox5.setSelected(false);
+        toppingCheckBox6.setSelected(false);
     }
 
     private void quitApp() {
